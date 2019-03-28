@@ -1,0 +1,22 @@
+{
+    "name": "Fennec",
+    "version": "1.0",
+    "description": "An extension for convenient images sharing with my little fennec",
+    "manifest_version": 2,
+    "permissions": [
+        "contextMenus",
+        "storage"
+    ],
+    "background": {
+        "persistant": false,
+        "scripts": [
+            "main.js"
+        ]
+    },
+    "icons": {
+        "128": "page/icons/fennec.png"
+    },
+    "browser_action": {
+        "default_icon": "page/icons/fennec.png"
+    }
+}
