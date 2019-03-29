@@ -76,3 +76,22 @@ img {
     color: black;
     font-size: 20px
 }
+
+#filter-select {
+    width: 25%;
+    font-size: 18px;
+    height: 40px;
+    padding-left: 10px;
+    border: none;
+    border-bottom: 1px solid black
+}
+#filter-select:focus {
+    outline: none;
+}
+#filter-select:hover {
+    border-bottom: 1px solid slategrey
+}
+
+option {
+    font-size: 14px;
+}

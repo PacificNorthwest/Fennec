@@ -24,11 +24,13 @@
         </div>
     </div>
 
-    <div class="cards-container pt-3 animated" id="container">
-        <div id="remove-all-button-container" class="d-none w-100 mb-5">
+    <div class="cards-container pt-3 animated">
+        <div id="menu-buttons-container" class="d-none w-100 mb-5">
+            <select name="filters" id="filter-select" class="float-left"></select>
             <button id="remove-all-button" class="btn btn-outline-primary float-right">Remove all</button>
         </div>
-        <h1 class="text-dark" id="empty-records-list-notification">No content saved for fennec yet :(</h1>
+        <h1 class="text-dark d-none" id="empty-records-list-notification">No content saved for fennec yet :(</h1>
+        <div id="container"></div>
     </div>
 
     <script src="fennec.js"></script>
