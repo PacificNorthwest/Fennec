@@ -39,7 +39,7 @@ img {
 
 .item {
     height: auto;
-    max-height: 1000px
+    max-height: 1000px;
 }
 
 .remove-button {
@@ -70,6 +70,10 @@ img {
 
 .animated .item.removed {
     opacity: 0;
+}
+
+.card-body {
+    overflow: auto
 }
 
 .card-body span {
