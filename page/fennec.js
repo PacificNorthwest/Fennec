@@ -55,10 +55,21 @@ function renderRecords(filter) {
                 var body = $('<div></div>').addClass('card-body').append(content);
                 var removeButton = $('<button></button>').addClass('btn btn-danger remove-button')
                     .append($('<span></span>').addClass('oi oi-x').attr('style', 'display: contents'));
+                var copyToClipboard = $('<button></button>').addClass('btn copy-clipboard-button')
+                    .append($('<span></span>')
+                    .addClass('oi oi-clipboard')
+                    .attr('style', 'display: contents'))
+                    .on('click', async () => {
+                        await navigator.clipboard.writeText(element.content);
+                        popup = $('#popup');
+                        popup.css('opacity', 0.6);
+                        setTimeout(() => popup.css('opacity', 0), 3000);
+                    });
                 var card = $('<div></div>')
                     .addClass('item card mb-5 shadow-lg bg-light text-light position-relative')
                     .append(body)
-                    .append(removeButton);
+                    .append(removeButton)
+                    .append(copyToClipboard);
     
                 removeButton.click(() => { remove(card, element) });
                 $('#container').append(card);

@@ -57,6 +57,29 @@ img {
     color: lemonchiffon
 }
 
+.card:hover .copy-clipboard-button {
+    opacity: 0.3;
+}
+.copy-clipboard-button {
+    position: absolute;
+    right: 40px;
+    top: 15px;
+    border-radius: 100%;
+    color: white;
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+    background: black;
+    padding: 5px;
+    padding-left: 7px;
+    opacity: 0;
+    transition: opacity 0.2s linear;
+}
+.card:hover .copy-clipboard-button:hover {
+    opacity: 0.5;
+    color: white
+}
+
 .item.removed {
     max-height: 0;
     margin-bottom: 0 !important;
@@ -98,4 +121,17 @@ img {
 
 option {
     font-size: 14px;
+}
+
+.clipboard-popup {
+    color: white;
+    background-color: rgba(0, 0, 0, 100);
+    font-size: 26px;
+    padding: 25px 35px;
+    border-radius: 10px;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out
 }
