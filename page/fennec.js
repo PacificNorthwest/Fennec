@@ -47,7 +47,7 @@ function renderRecords(filter) {
                                                     .attr('allow', 'encrypted-media')
                                                     .attr('allowfullscreen', true)
                 } else if (element.type == 'link') {
-                    content = $('<a></a>').attr('href', element.content).text(element.content)
+                    content = $('<a></a>').attr('href', element.content).attr('target', '_blank').text(element.content)
                 } else if (element.type == 'text') {
                     content = $('<span></span>').text(element.content)
                 } else return
