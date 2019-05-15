@@ -62,8 +62,8 @@ function renderRecords(filter) {
                     .on('click', async () => {
                         await navigator.clipboard.writeText(element.content);
                         popup = $('#popup');
-                        popup.css('opacity', 0.6);
-                        setTimeout(() => popup.css('opacity', 0), 3000);
+                        popup.addClass('active');
+                        setTimeout(() => popup.removeClass('active'), 3000);
                     });
                 var card = $('<div></div>')
                     .addClass('item card mb-5 shadow-lg bg-light text-light position-relative')
