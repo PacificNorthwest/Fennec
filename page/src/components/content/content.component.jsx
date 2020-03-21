@@ -2,7 +2,7 @@ import React from 'react';
 import StackGrid from 'react-stack-grid';
 
 import { connect } from 'react-redux'
-import { Tile } from '../tile/tile.component';
+import Tile from '../tile/tile.component';
 
 import './content.style.scss'
 
@@ -25,7 +25,7 @@ class ContentGrid extends React.Component {
 
 function mapStateToProps(state) {
     return {
-        records: state.records
+        records: [...state.records]
     };
 }
 

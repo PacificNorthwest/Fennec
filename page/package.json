@@ -7,12 +7,13 @@
     "node-sass": "^4.13.1",
     "react": "^16.13.0",
     "react-bootstrap": "^1.0.0-beta.17",
-    "react-bootstrap-icons": "^1.0.0-alpha2",
     "react-dom": "^16.13.0",
+    "react-icons": "^3.9.0",
     "react-redux": "^7.2.0",
     "react-scripts": "3.4.0",
     "react-stack-grid": "^0.7.1",
-    "redux": "^4.0.5"
+    "redux": "^4.0.5",
+    "redux-loop": "^5.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
