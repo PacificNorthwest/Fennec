@@ -1,0 +1,67 @@
+$transition-time: 0.2s;
+
+.tile-card {
+    border: solid 1px gainsboro;
+    border-radius: 10px;
+    min-height: 100px;
+    overflow: hidden;
+    margin: 15px;
+    transition: box-shadow ease-in-out $transition-time;
+    
+    .action-icons-group {
+        position: absolute;
+        right: 25px;
+        top: 15px;
+        display: flex;
+        flex-flow: column;
+        justify-items: normal;
+        transition: all ease-in-out $transition-time;
+        
+        .tile-action-button {
+            transition: all ease-in-out $transition-time;
+        }
+        
+        &.hidden {
+            transform: translateY(-10px);
+            opacity: 0;
+            
+            & .tile-action-button {
+                transform: scale(0.5);
+            }
+        }
+    }
+    
+    .tile-action-button {
+        position: relative;
+        border: none;
+        background-color: rgba(0, 0, 0, 0.3);
+        font-size: 25px;
+        color: white;
+        padding: 0;
+        margin-top: 10px;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 100px;
+
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        &:focus {
+            outline: none;
+            -moz-outline-style: none
+        }
+
+        .icon {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    
+    .tile-media-content {
+        max-width: 100%;
+        height: auto;
+    }
+}
