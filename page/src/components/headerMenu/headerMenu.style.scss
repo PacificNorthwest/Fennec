@@ -1,0 +1,55 @@
+@import '../../common/styles/colors.scss'; 
+
+$transition-time: 0.1s;
+
+.header-menu-button {
+    position: absolute;
+    right: 100px;
+    background-color: $primary-color;
+    border: solid 1px;
+    border-color: darken(desaturate($primary-color, 7.52), 8.43);
+    border-radius: 5px;
+    padding: 6px 10px;
+
+    transition: all $transition-time ease-in-out;
+
+    &:focus,
+    &:hover {
+        outline: none;
+        background-color: darken(desaturate($primary-color, 7.52), 8.43);
+
+        .icon {
+            color: white;
+        }
+    }
+
+    .icon {
+        transition: all 0.2s ease-in-out;
+        color: darken(desaturate($primary-color, 7.52), 20);
+    }
+}
+
+.menu {
+    font-size: 22px;
+
+    .menu-item {
+        display: block;
+        margin: 3px auto;
+        background-color: transparent;
+        border: none;
+        border-radius: 5px;
+        width: 100%;
+        padding: 5px 0;
+        transition: all $transition-time ease-in-out;
+
+        &:focus {
+            outline: none;
+        }
+
+        &:hover {
+            outline: none;
+            color: white;
+            background-color: darken(desaturate($primary-color, 7.52), 8.43);
+        }
+    }
+}

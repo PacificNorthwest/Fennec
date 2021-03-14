@@ -1,14 +1,21 @@
+@import '../../common/styles/colors.scss'; 
+
 $transition-time: 0.2s;
 
 .tile-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: solid 1px gainsboro;
     border-radius: 10px;
+    background-color: white;
     min-height: 100px;
     overflow: hidden;
     margin: 15px;
     transition: box-shadow ease-in-out $transition-time;
     
     .action-icons-group {
+        z-index: 4;
         position: absolute;
         right: 25px;
         top: 15px;
@@ -49,6 +56,7 @@ $transition-time: 0.2s;
 
         &:focus {
             outline: none;
+            outline-style: none;
             -moz-outline-style: none
         }
 
@@ -60,8 +68,26 @@ $transition-time: 0.2s;
         }
     }
     
-    .tile-media-content {
-        max-width: 100%;
-        height: auto;
+    .media-content-container {
+        z-index: 2;
+        flex: 1 1 auto;
+        overflow-wrap: anywhere;
+
+        &.media-text-container,
+        &.media-link-container {
+            font-size: 23px;
+            padding: 10px 30px;
+        }
+
+
+        .tile-media-content {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .loading-indicator {
+        color: $primary-color;
+        position: absolute;
     }
 }

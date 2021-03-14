@@ -4,7 +4,9 @@ import { rootReducer } from './reducers'
 
 const initialState = {
     records: [],
-    ready: false
+    ready: false,
+
+    isImportPopupOpen: false
 }
 
 export default createStore(rootReducer, initialState, install());

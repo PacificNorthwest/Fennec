@@ -1,22 +1,46 @@
-.App {
+@import '../../common/styles/colors.scss'; 
+
+html, body, #root {
+  height: 100%;
+}
+
+.app {
+  min-height: 100%;
   text-align: center;
+  background-color: $background-color;
 }
 
-.App-logo {
-  height: 10vmin;
-  position: absolute;
-  padding-right: 250px;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #343a40;
-  max-height: 8vh;
+.app-header {
+  background-color: $primary-color;
+  max-height: 10vh;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 3vmin);
-  color: white;
   padding: 0px 0;
 }
+
+.default-toast {
+  background-color: $primary-color !important;
+  color: white !important;
+  border: 1px solid $secondary-color
+}
+
+.title-container {
+  position: relative;
+  text-align: left;
+
+  .app-logo {
+    height: 100%;
+    position: absolute;
+    transform: translateX(-100%);
+    pointer-events: none;
+  }
+  
+  #header-title {
+    color: $secondary-color;
+    font-size: 3rem;
+    margin: 1rem
+  }
+}
+  
